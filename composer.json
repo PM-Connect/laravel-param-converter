@@ -1,0 +1,32 @@
+{
+    "name": "pm-connect/laravel-param-converter",
+    "description": "Symfony param converters working in Laravel.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joseph Ralph",
+            "email": "joseph@pmconnect.co.uk"
+        },
+        {
+            "name": "Joseph Ralph",
+            "email": "joe@josephralph.co.uk"
+        }
+    ],
+    "require": {
+        "php": "~7",
+        "sensio/framework-extra-bundle": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PmConnect\\LaravelParamConverter\\": "src/"
+        }
+    },
+    "require-dev": {
+        "illuminate/support": "^5.4",
+        "illuminate/container": "^5.4",
+        "illuminate/config": "^5.4",
+        "illuminate/http": "^5.4",
+        "illuminate/routing": "^5.4"
+    }
+}
