@@ -88,7 +88,9 @@ class ParamConverter
                 throw new NotFoundHttpException(sprintf('Converters returned null value for "%s" and cannot be handled by laravel.', $annotation->getName()));
             }
 
-            $route->setParameter($annotation->getName(), $value);
+            if ($value) {
+                $route->setParameter($annotation->getName(), $value);
+            }
         }
     }
 
@@ -127,7 +129,11 @@ class ParamConverter
             }
         }
 
-        return null;
+        if ($paramConverter->isOptional()) {
+            return null;
+        } else {
+            throw new NotFoundHttpException(sprintf('Non optional converters returned null value for "%s".', $paramConverter->getName()));
+        }
     }
 
     protected function getConverters(ParamConverterAnnotation $paramConverter)
