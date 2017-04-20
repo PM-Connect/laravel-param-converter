@@ -15,18 +15,16 @@
     ],
     "require": {
         "php": "~7",
-        "sensio/framework-extra-bundle": "^3.0"
+        "sensio/framework-extra-bundle": "~3.0",
+        "illuminate/support": "5.3.x|5.4.x|5.5.x",
+        "illuminate/container": "5.3.x|5.4.x|5.5.x",
+        "illuminate/config": "5.3.x|5.4.x|5.5.x",
+        "illuminate/http": "5.3.x|5.4.x|5.5.x",
+        "illuminate/routing": "5.3.x|5.4.x|5.5.x"
     },
     "autoload": {
         "psr-4": {
             "PmConnect\\LaravelParamConverter\\": "src/"
         }
-    },
-    "require-dev": {
-        "illuminate/support": "^5.4",
-        "illuminate/container": "^5.4",
-        "illuminate/config": "^5.4",
-        "illuminate/http": "^5.4",
-        "illuminate/routing": "^5.4"
     }
 }
