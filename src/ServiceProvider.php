@@ -16,15 +16,17 @@ class ServiceProvider extends BaseServiceProvider
         /** @var Container $app */
         $app = $this->app;
 
+        $this->mergeConfigFrom($this->configPath(), 'param-converter');
+
         /** @var Repository $config */
         $config = $app->make(Repository::class);
 
-        /** @var ParamConverterInterface[] $converters */
+        /** @var string[] $converters */
         $converters = $config->get('param-converter.converters', []);
 
         foreach ($converters as $converter) {
             $app->singleton($converter, function (Container $app) use ($converter) {
-                return $app->make($converter);
+                return $app->make('\\' . $converter);
             });
         }
     }
