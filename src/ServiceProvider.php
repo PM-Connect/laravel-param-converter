@@ -18,7 +18,7 @@ class ServiceProvider extends BaseServiceProvider
         /** @var Repository $config */
         $config = $app->make(Repository::class);
 
-        $converters = $config->get('param-converter.converters');
+        $converters = $config->get('param-converter.converters', []);
 
         foreach ($converters as $converter) {
             $app->singleton($converter, function (Container $app) use ($converter) {
