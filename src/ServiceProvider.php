@@ -6,7 +6,7 @@ use Illuminate\Config\Repository;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
-use PmConnect\LaravelParamConverter\Middleware\ParamConverter;
+use PmConnect\LaravelParamConverter\Middleware\RouteSetup;
 use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\ParamConverterInterface;
 
 class ServiceProvider extends BaseServiceProvider
@@ -39,8 +39,8 @@ class ServiceProvider extends BaseServiceProvider
         /** @var \Illuminate\Foundation\Http\Kernel $kernel */
         $kernel = $app->make(Kernel::class);
 
-        if (! $kernel->hasMiddleware(ParamConverter::class)) {
-            $kernel->prependMiddleware(ParamConverter::class);
+        if (! $kernel->hasMiddleware(RouteSetup::class)) {
+            $kernel->prependMiddleware(RouteSetup::class);
         }
     }
 
