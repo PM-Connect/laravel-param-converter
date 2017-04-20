@@ -7,6 +7,7 @@ use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use PmConnect\LaravelParamConverter\Middleware\ParamConverter;
+use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\ParamConverterInterface;
 
 class ServiceProvider extends BaseServiceProvider
 {
@@ -18,6 +19,7 @@ class ServiceProvider extends BaseServiceProvider
         /** @var Repository $config */
         $config = $app->make(Repository::class);
 
+        /** @var ParamConverterInterface[] $converters */
         $converters = $config->get('param-converter.converters', []);
 
         foreach ($converters as $converter) {
