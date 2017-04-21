@@ -20,7 +20,8 @@
         "illuminate/container": "5.3.x|5.4.x",
         "illuminate/config": "5.3.x|5.4.x",
         "illuminate/http": "5.3.x|5.4.x",
-        "illuminate/routing": "5.3.x|5.4.x"
+        "illuminate/routing": "5.3.x|5.4.x",
+        "doctrine/annotations": "~1"
     },
     "autoload": {
         "psr-4": {
