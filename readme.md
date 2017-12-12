@@ -14,7 +14,7 @@ composer require pm-connect/laravel-param-converter
 
 Setup is extremely simple, just add the service provider to your `app.php` config.
 
-```
+```php
 \PmConnect\LaravelParamConverter\ServiceProvider::class,
 ```
 
