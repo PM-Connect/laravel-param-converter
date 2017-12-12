@@ -24,6 +24,16 @@ You can also publish the config so you can add your own param converters.
 php artisan vendor:publish --provider="\PmConnect\LaravelParamConverter\ServiceProvider"
 ```
 
+#### Annotation Registry Loader
+
+Depending on the setup you have, you may need to setup doctrines `AnnotationRegistry` class and tell it how to autoload classes.
+
+This can be done by adding the following into a `boot` method of a service provider.
+
+```
+AnnotationRegistry::registerLoader('class_exists');
+```
+
 ### Custom Converters
 
 See the Symfony docs for how to create custom converters [here](http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html#creating-a-converter).
