@@ -16,11 +16,11 @@
     "require": {
         "php": "~7",
         "sensio/framework-extra-bundle": "~3.0",
-        "illuminate/support": "5.3.x|5.4.x",
-        "illuminate/container": "5.3.x|5.4.x",
-        "illuminate/config": "5.3.x|5.4.x",
-        "illuminate/http": "5.3.x|5.4.x",
-        "illuminate/routing": "5.3.x|5.4.x",
+        "illuminate/support": "5.3.x|5.4.x|5.5.x",
+        "illuminate/container": "5.3.x|5.4.x|5.5.x",
+        "illuminate/config": "5.3.x|5.4.x|5.5.x",
+        "illuminate/http": "5.3.x|5.4.x|5.5.x",
+        "illuminate/routing": "5.3.x|5.4.x|5.5.x",
         "doctrine/annotations": "~1"
     },
     "autoload": {
