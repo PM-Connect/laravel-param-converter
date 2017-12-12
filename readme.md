@@ -30,7 +30,7 @@ Depending on the setup you have, you may need to setup doctrines `AnnotationRegi
 
 This can be done by adding the following into a `boot` method of a service provider.
 
-```
+```php
 AnnotationRegistry::registerLoader('class_exists');
 ```
 
