@@ -5,12 +5,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Joseph Ralph",
-            "email": "joseph@pmconnect.co.uk"
-        },
-        {
-            "name": "Joseph Ralph",
-            "email": "joe@josephralph.co.uk"
+            "name": "Marcus Speight",
+            "email": "marcus@pmconnect.co.uk"
         }
     ],
     "require": {
