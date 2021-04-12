@@ -110,8 +110,8 @@ class ParamConverter
 
     protected function setAnnotationClassFromReflection(ParamConverterAnnotation $paramConverter, \ReflectionParameter $parameter)
     {
-        if ($parameter->getClass() && ! $paramConverter->getClass()) {
-            $paramConverter->setClass($parameter->getClass()->getName());
+        if ($parameter->getType() && ! $paramConverter->getClass()) {
+            $paramConverter->setClass($parameter->getType()->getName());
         }
     }
 
